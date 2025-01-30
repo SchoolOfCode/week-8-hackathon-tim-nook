@@ -14,12 +14,12 @@ function App() {
 
   return (
     <>
-      <Header></Header>
-      <Title></Title>
-      <Footer></Footer>
-      <Form />;
-      <DropdownMenu />;
-      <SelectedPostbox />;
+      <Header />
+      <Title />
+      <Footer />
+      <Form />
+      <DropdownMenu />
+      <SelectedPostbox />
       <NewPostcard />
     </>
   );
