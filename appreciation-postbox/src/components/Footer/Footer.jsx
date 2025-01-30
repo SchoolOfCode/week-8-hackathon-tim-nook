@@ -1,1 +1,5 @@
-<footer></footer>;
+function Footer() {
+  return <footer>This is our footer</footer>;
+}
+
+export default Footer;
