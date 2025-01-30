@@ -1,16 +1,20 @@
+import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
+
 function Dropdown({ postboxes, setSelectedPostbox }) {
   return (
-    <>
-      <label>Postbox : </label>
-      <select onChange={(e) => setSelectedPostbox(e.target.value)}>
-        <option value="">Select...</option>
-        {postboxes.map((postbox) => (
-          <option key={postbox.postboxId} value={postbox.postboxId}>
-            {postbox.owner}
-          </option>
-        ))}
-      </select>
-    </>
+    <FormControl fullWidth>
+      <InputLabel>Postbox</InputLabel>
+      {
+        <Select onChange={(e) => setSelectedPostbox(e.target.value)}>
+          <MenuItem value="">Select...</MenuItem>
+          {postboxes.map((postbox) => (
+            <MenuItem key={postbox.postboxId} value={postbox.postboxId}>
+              {postbox.owner}
+            </MenuItem>
+          ))}
+        </Select>
+      }
+    </FormControl>
   );
 }
 
