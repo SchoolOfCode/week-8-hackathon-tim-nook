@@ -2,7 +2,7 @@ function Postcard({ postcard }) {
   return (
     <>
       <p>Postcard message: {postcard.content}</p>
-      <p>Sender: {postcard.sender}</p>
+      <p>from... {postcard.sender}</p>
     </>
   );
 }
