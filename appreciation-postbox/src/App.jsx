@@ -2,10 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Form from "./components/Form/Form";
-import DropdownMenu from "./components/Dropdown/Dropdown";
-import NewPostcard from "./components/NewPostcard/NewPostcard";
-import SelectedPostbox from "./components/SelectedPostbox/SelectedPostbox";
 import Title from "./components/Title/Title";
+import PostcardContainer from "./components/PostcardContainer/PostcardContainer";
 import Footer from "./components/Footer/Footer";
 import jsonData from "./data.json";
 import { ThemeProvider } from "@emotion/react";
@@ -30,6 +28,13 @@ const pinkTheme = createTheme({
 
 function App() {
   const [postboxes, setPostboxes] = useState(jsonData);
+  const [selectedPostbox, setSelectedPostbox] = useState("");
+
+  const currentPostbox = postboxes.find(
+    (postbox) => postbox.postboxId === Number(selectedPostbox)
+  );
+
+  const postcardsToShow = currentPostbox ? currentPostbox.postcards : []; // this makes sure that if currentPostbox is undefined then there won't be errors accessing currentPostbox.postcards
 
   return (
     <ThemeProvider theme={pinkTheme}>
@@ -37,10 +42,8 @@ function App() {
         <CssBaseline />
         <Header />
         <Title />
-        <Form />
-        <DropdownMenu />
-        <SelectedPostbox />
-        <NewPostcard />
+        <Form postboxes={postboxes} setSelectedPostbox={setSelectedPostbox} />
+        <PostcardContainer postcards={postcardsToShow} />
         <Footer />
       </>
     </ThemeProvider>
