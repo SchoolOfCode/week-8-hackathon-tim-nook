@@ -1,0 +1,40 @@
+[
+  {
+    "postboxId": 1,
+    "owner": "Kim",
+    "postcards": [
+      {
+        "postcardId": 1,
+        "sender": "Sarah",
+        "content": "You're amazing!"
+      },
+      {
+        "postcardId": 2,
+        "sender": "Tim",
+        "content": "You're a star!"
+      }
+    ]
+  },
+  {
+    "postboxId": 2,
+    "owner": "Tim",
+    "postcards": [
+      {
+        "postcardId": 1,
+        "sender": "Kim",
+        "content": "You're great!"
+      }
+    ]
+  },
+  {
+    "postboxId": 3,
+    "owner": "Sarah",
+    "postcards": [
+      {
+        "postcardId": 1,
+        "sender": "Tim",
+        "content": "You're wonderful!"
+      }
+    ]
+  }
+]

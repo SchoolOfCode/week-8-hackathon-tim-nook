@@ -1,22 +1,24 @@
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header/Header";
-import PostcardContainer from "./components/PostcardContainer/PostcardContainer";
-import Form from "./components/Form";
-import DropdownMenu from "./components/Form";
-import NewPostcard from "./components/Form";
-import SelectedPostbox from "./components/Form";
+import Dropdown from "./components/Dropdown/Dropdown";
+import NewPostcard from "./components/NewPostcard/NewPostcard";
+import SelectedPostbox from "./components/SelectedPostbox/SelectedPostbox";
+import Form from "./components/Form/Form";
 import Title from "./components/Title/Title";
 import Footer from "./components/Footer/Footer";
+import jsonData from "./data.json";
 
 function App() {
+  const [postboxes, setPostboxes] = useState(jsonData);
+
   return (
     <>
-      <Header></Header>
-      <Title></Title>
-      <PostcardContainer></PostcardContainer>
-      <Footer></Footer>
+      <Header />
+      <Title />
+      <Footer />
       <Form />
-      <DropdownMenu />
+      <Dropdown />
       <SelectedPostbox />
       <NewPostcard />
     </>
