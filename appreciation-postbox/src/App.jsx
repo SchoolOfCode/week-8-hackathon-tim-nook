@@ -1,6 +1,10 @@
 import "./App.css";
 import Header from "./components/Header/Header";
 import PostcardContainer from "./components/PostcardContainer/PostcardContainer";
+import Form from "./components/Form";
+import DropdownMenu from "./components/Form";
+import NewPostcard from "./components/Form";
+import SelectedPostbox from "./components/Form";
 import Title from "./components/Title/Title";
 import Footer from "./components/Footer/Footer";
 
@@ -11,6 +15,10 @@ function App() {
       <Title></Title>
       <PostcardContainer></PostcardContainer>
       <Footer></Footer>
+      <Form />
+      <DropdownMenu />
+      <SelectedPostbox />
+      <NewPostcard />
     </>
   );
 }
