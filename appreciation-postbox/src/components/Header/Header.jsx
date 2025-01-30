@@ -1,5 +1,7 @@
+import { AppBar } from "@mui/material";
+
 function Header() {
-  return <header>Hello</header>;
+  return <AppBar style={{ height: "4rem" }} />;
 }
 
 export default Header;
