@@ -20,7 +20,7 @@
     "owner": "Tim",
     "postcards": [
       {
-        "postcardId": 1,
+        "postcardId": 3,
         "sender": "Kim",
         "content": "You're great!"
       }
@@ -31,7 +31,7 @@
     "owner": "Sarah",
     "postcards": [
       {
-        "postcardId": 1,
+        "postcardId": 4,
         "sender": "Tim",
         "content": "You're wonderful!"
       }

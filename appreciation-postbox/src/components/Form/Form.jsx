@@ -1,13 +1,22 @@
-import AddPostcardButton from "../AddPostcardButton/AddPostcardButton";
-import InputField from "../InputField/InputField";
+import { useState } from "react";
+import { TextField, Button } from "@mui/material";
 import Dropdown from "../Dropdown/Dropdown";
 
-function Form({ postboxes, setSelectedPostbox }) {
+function Form({ postboxes, setSelectedPostbox, addNewPostcard }) {
+  const [postcardMessage, setPostcardMessage] = useState("");
+
+  function handleClick() {
+    addNewPostcard(postcardMessage);
+  }
+
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
       <Dropdown postboxes={postboxes} setSelectedPostbox={setSelectedPostbox} />
-      <InputField></InputField>
-      <AddPostcardButton>Add</AddPostcardButton>
+      <TextField
+        label="Message"
+        onChange={(e) => setPostcardMessage(e.target.value)}
+      />
+      <Button onClick={handleClick}>Add</Button>
     </div>
   );
 }
