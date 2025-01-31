@@ -1,0 +1,13 @@
+.PostcardContainerWrapper {
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.PostcardContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    border-radius: 15px;
+    border: 2px solid #175519; 
+    padding: 16px;
+}

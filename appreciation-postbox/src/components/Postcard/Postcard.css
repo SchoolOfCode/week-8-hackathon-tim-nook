@@ -1,0 +1,16 @@
+.postcardWrap { 
+    border-radius: 10px;
+    border: 3px solid #48984b; 
+    padding: 16px;
+}
+
+.postcardMessage {
+    font-family:initial;
+    font-size: 20px;
+}
+
+.postcardSender {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+}
+
