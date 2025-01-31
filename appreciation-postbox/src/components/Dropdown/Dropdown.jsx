@@ -5,7 +5,10 @@ function Dropdown({ postboxes, setSelectedPostbox }) {
     <FormControl fullWidth>
       <InputLabel>Postbox</InputLabel>
       {
-        <Select onChange={(e) => setSelectedPostbox(e.target.value)}>
+        <Select
+          label="Postbox"
+          onChange={(e) => setSelectedPostbox(e.target.value)}
+        >
           <MenuItem value="">Select...</MenuItem>
           {postboxes.map((postbox) => (
             <MenuItem key={postbox.postboxId} value={postbox.postboxId}>
