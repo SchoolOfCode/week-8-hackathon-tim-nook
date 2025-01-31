@@ -1,13 +1,12 @@
 import { useState } from "react";
-import Button from "@mui/material";
-import { TextField } from "@mui/material";
+import { TextField, Button } from "@mui/material";
 import Dropdown from "../Dropdown/Dropdown";
 
-function Form({ postboxes, setSelectedPostbox }) {
+function Form({ postboxes, setSelectedPostbox, addNewPostcard }) {
   const [postcardMessage, setPostcardMessage] = useState("");
 
   function handleClick() {
-    postcardMessage;
+    addNewPostcard(postcardMessage);
   }
 
   return (
